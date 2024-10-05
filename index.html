@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Puzzle Solver</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>ಸಂಖ್ಯೆಗಳ ಪಜಲ್ ಪರಿಹಾರಕ. ಉಲ್ಲಾಸದ ಆಟ</h1>
+
+    <div>
+        <label for="gridSize">"ಗ್ರಿಡ್ ಗಾತ್ರ ಆಯ್ಕೆ ಮಾಡಿ:"</label>
+        <select id="gridSize" onchange="createPuzzle()">
+            <option value="2">೨×೨</option>
+            <option value="3">೩×೩</option>
+            <option value="4">೪×೪</option>
+            <option value="5">೫×೫</option>
+            <option value="6">೬×೬</option>
+        </select>
+    </div>
+
+    <div id="puzzleGrid"></div>
+
+    <button id="shuffle" onclick="shufflePuzzle()">ಪಜಲ್ ಮಿಶ್ರಣ ಮಾಡಿ</button>
+    <button id="order" onclick="orderPuzzle()">ಪಜಲ್ ಅನ್ನು ಕ್ರಮದ್ಧಗೊಳಿಸಿ</button>
+    <button id="solve" onclick="solvePuzzle()">ಪಜಲ್ ಪರಿಹರಿಸಿ</button>
+
+    <h2>ಚಲನೆಗಳು</h2>
+<div id="movesDisplay">ಚಲನೆಗಳು: 0</div>
+
+
+    <h2>ಪರಿಹಾರ ಹಂತಗಳು</h2>
+    <div id="solutionContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

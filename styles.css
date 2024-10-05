@@ -1,0 +1,94 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: #e8f5e9;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #004d40;
+}
+
+#puzzleGrid {
+    display: grid;
+    gap: 10px;
+    margin-top: 20px;
+    background-color: #c8e6c9;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.cell {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #a5d6a7;
+    font-size: 22px;
+    border: 2px solid #004d40;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cell:hover {
+    background-color: #81c784;
+    transform: scale(1.05);
+}
+
+.blank {
+    background-color: #eeeeee;
+}
+
+button {
+    margin: 12px;
+    padding: 12px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #004d40;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #00251a;
+    transform: scale(1.05);
+}
+
+#solutionContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 25px;
+    margin-top: 25px; 
+}
+
+.matrix {
+    display: grid;
+    grid-template-columns: repeat(${size}, 65px);
+    gap: 10px;
+    padding: 10px; 
+    background-color: #f0f4c3; 
+    border:2px solid #00796b; 
+    border-radius: 10px; 
+    text-align: center;
+}
+
+.stepLabel {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    grid-column: span 4; 
+}
+.thankYouMessage {
+    text-align: center;
+    margin-top: 20px; 
+    font-size: 24px; 
+    font-weight: bold; 
+}
